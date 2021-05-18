@@ -78,8 +78,8 @@ describe '管理者のテスト' do
   end
 
   describe '商品新規投稿画面のテスト' do
-    before visit do
-      '/admin/products/new'
+    before do
+      visit new_admin_product_path
     end
 
     context '商品新規投稿画面' do
@@ -102,8 +102,8 @@ describe '管理者のテスト' do
   end
 
   describe '商品詳細画面のテスト' do
-    before visit do
-      admin_product_path(product.id)
+    before do
+      visit admin_product_path(product.id)
     end
 
     context '商品詳細画面' do
@@ -114,8 +114,8 @@ describe '管理者のテスト' do
   end
 
   describe '商品一覧画面のテスト(2回目)' do
-    before visit do
-      '/admin/homes/top'
+    before do
+      visit admin_top_path
     end
 
     context '商品一覧画面の表示' do
@@ -129,8 +129,8 @@ describe '管理者のテスト' do
   end
 
   describe '商品新規投稿画面のテスト(2回目)' do
-    before visit do
-      '/admin/products/new'
+    before do
+      visit new_admin_product_path
     end
 
     context '商品新規投稿画面' do
@@ -153,8 +153,8 @@ describe '管理者のテスト' do
   end
 
   describe '商品一覧画面のテスト(3回目)' do
-    before visit do
-      '/admin/homes/top'
+    before do
+      visit admin_top_path
     end
 
     context '商品一覧画面の表示' do
